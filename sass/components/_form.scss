@@ -1,0 +1,68 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	input {
+		width: 37rem;
+		height: 4.5rem;
+		margin: 1rem;
+		border-radius: 0.5rem;
+	}
+
+	&__input {
+		padding: 0 1.5rem;
+		border: 0.1rem solid #777;
+		font-size: 1.6rem;
+	}
+
+	&__button--login {
+		background-color: #036bb1;
+		color: #fff;
+		border: 0.1rem solid #036bb1;
+		font-size: 1.8rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		color: #229fe7;
+		margin: 1.2rem 0 1rem 0;
+	}
+
+	span {
+		width: 2rem;
+		font-size: 1.8rem;
+		color: #888;
+		margin: 1rem 0;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 16rem;
+			height: 0.1rem;
+			background-color: #ccc;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&::before {
+			right: 3.5rem;
+		}
+
+		&::after {
+			left: 3.5rem;
+		}
+	}
+
+	&__button--signup {
+		background-color: #dbe8ec;
+		border: 0.1rem solid #dbe8ec;
+		font-size: 1.8rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}

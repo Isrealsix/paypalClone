@@ -11,6 +11,9 @@
   list-style-type: none;
   outline: none; }
 
+.front-page {
+  display: none; }
+
 html {
   font-family: 'Baloo Da 2', cursive;
   font-size: 62.5%; }
@@ -122,23 +125,6 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .navbar__logo {
-    font-size: 3.5rem;
-    font-style: italic;
-    font-weight: 800;
-    color: #fff;
-    position: relative; }
-    .navbar__logo--p1 {
-      font-size: 4.5rem;
-      margin-right: 1rem;
-      position: relative;
-      z-index: 10; }
-    .navbar__logo--p2 {
-      font-size: 4.5rem;
-      color: #bbb;
-      position: absolute;
-      top: 0.4rem;
-      left: 0.5rem; }
   .navbar__list {
     display: flex; }
   .navbar__item {
@@ -302,3 +288,95 @@ html {
   .navbar__buttons .navbar__btn--signup {
     background-color: var(--color-white);
     color: var(--color-26); }
+
+.logo {
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 800;
+  color: #fff;
+  position: relative; }
+  .logo--p1 {
+    font-size: 4.5rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 10; }
+  .logo--p2 {
+    font-size: 4.5rem;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .form input {
+    width: 37rem;
+    height: 4.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem; }
+  .form__input {
+    padding: 0 1.5rem;
+    border: 0.1rem solid #777;
+    font-size: 1.6rem; }
+  .form__button--login {
+    background-color: #036bb1;
+    color: #fff;
+    border: 0.1rem solid #036bb1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer; }
+  .form__link {
+    font-size: 1.6rem;
+    color: #229fe7;
+    margin: 1.2rem 0 1rem 0; }
+  .form span {
+    width: 2rem;
+    font-size: 1.8rem;
+    color: #888;
+    margin: 1rem 0;
+    position: relative; }
+    .form span::before, .form span::after {
+      content: '';
+      position: absolute;
+      width: 16rem;
+      height: 0.1rem;
+      background-color: #ccc;
+      top: 50%;
+      transform: translateY(-50%); }
+    .form span::before {
+      right: 3.5rem; }
+    .form span::after {
+      left: 3.5rem; }
+  .form__button--signup {
+    background-color: #dbe8ec;
+    border: 0.1rem solid #dbe8ec;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer; }
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .login-page .login {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid #cfcfcf;
+    padding: 3rem; }
+    .login-page .login__logo {
+      margin-bottom: 1.2rem; }
+      .login-page .login__logo .logo--p1 {
+        color: #064699; }
+      .login-page .login__logo .logo--p2 {
+        color: #32a4f0; }
+      .login-page .login__logo span:nth-child(3) {
+        color: #064699; }
+      .login-page .login__logo span:nth-child(4) {
+        color: #32a4f0; }

@@ -1,0 +1,22 @@
+.logo {
+	font-size: 3.5rem;
+	font-style: italic;
+	font-weight: 800;
+	color: #fff;
+	position: relative;
+
+	&--p1 {
+		font-size: 4.5rem;
+		margin-right: 1rem;
+		position: relative;
+		z-index: 10;
+	}
+
+	&--p2 {
+		font-size: 4.5rem;
+		color: #bbb;
+		position: absolute;
+		top: 0.4rem;
+		left: 0.5rem;
+	}
+}
