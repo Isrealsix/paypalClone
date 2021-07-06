@@ -98,6 +98,18 @@ html {
           justify-content: center;
           align-items: center; }
 
+.section-5 {
+  width: 100%; }
+  .section-5-top {
+    width: 100%;
+    background-color: #f3f7fa;
+    text-align: center;
+    padding: 7rem 0; }
+    .section-5-top__heading {
+      font-size: 3.5rem;
+      font-weight: 400;
+      margin-bottom: 4rem; }
+
 .navbar {
   width: 100%;
   height: 8rem;
@@ -243,6 +255,38 @@ html {
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 1.2; }
+
+.footer {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0 3rem 0; }
+  .footer-top {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem dotted #262626;
+    padding-bottom: 1rem; }
+  .footer__list {
+    display: flex;
+    justify-content: center; }
+    .footer__list li {
+      margin-right: 2.5rem; }
+      .footer__list li a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #262626; }
+    .footer__list img {
+      width: 3.8rem;
+      opacity: 0.6; }
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem; }
 
 .navbar__buttons .navbar__btn {
   width: 8rem;

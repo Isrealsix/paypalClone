@@ -1,0 +1,16 @@
+.section-5 {
+	width: 100%;
+
+	&-top {
+		width: 100%;
+		background-color: #f3f7fa;
+		text-align: center;
+		padding: 7rem 0;
+
+		&__heading {
+			font-size: 3.5rem;
+			font-weight: 400;
+			margin-bottom: 4rem;
+		}
+	}
+}
