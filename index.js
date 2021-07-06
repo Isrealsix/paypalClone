@@ -1,6 +1,6 @@
 // Navigation dropdown hover
 
-const allDropdown = document.querySelectorAll('.dropdown-hover');
+const navbar = document.querySelector('.navbar');
 const section1 = document.querySelector('.section-1');
 
 // section1.addEventListener('mouseover', ev => {
@@ -23,7 +23,12 @@ const displayDropdown = eventType => {
 		if (!target) return;
 		let opacity = eventType == 'mouseover' ? 1 : 0;
 		let visibility = eventType == 'mouseover' ? 'visible' : 'hidden';
-		target.lastElementChild.style.cssText = `opacity: ${opacity}; visibility: ${visibility}`;
+		let background =
+			eventType == 'mouseover'
+				? 'linear-gradient(to right, #066399, #2f8fdf, #066399)'
+				: 'none';
+		target.lastElementChild.style.cssText = `opacity: ${opacity}; visibility: ${visibility};`;
+		navbar.style.cssText = `background: ${background}`;
 	});
 };
 
