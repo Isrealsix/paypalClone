@@ -9,6 +9,13 @@
 	flex-direction: column;
 	align-items: center;
 
+	@include respond(laptop) {
+		background: linear-gradient(
+			rgba(112, 112, 112, 0.9),
+			rgba(255, 255, 255, 0.8) 12%
+		);
+	}
+
 	&__top {
 		width: 120rem;
 		height: 10rem;
@@ -16,6 +23,10 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 5rem;
+
+		@include respond(laptop-sm) {
+			width: 90rem;
+		}
 
 		button {
 			width: 8rem;
@@ -43,10 +54,26 @@
 		display: flex;
 		justify-content: space-between;
 
+		@include respond(laptop-sm) {
+			width: 90rem;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		&__left {
 			width: 60%;
 			border-right: 0.1rem solid #b1b1b1;
 			padding: 3rem 3rem 3rem 0;
+
+			@include respond(laptop-sm) {
+				width: 100%;
+				border-right: none;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				border-bottom: 0.1rem solid #b1b1b1;
+			}
 
 			&--images {
 				display: flex;
@@ -73,6 +100,15 @@
 			padding: 3rem 0 3rem 3rem;
 			color: #555;
 
+			@include respond(laptop-sm) {
+				width: 100%;
+				padding: 3rem;
+
+				.blue-btn {
+					width: 100%;
+					margin: 3rem 0;
+				}
+			}
 			h3 {
 				font-size: 2.4rem;
 				font-weight: 300;

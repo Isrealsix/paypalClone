@@ -1,4 +1,8 @@
 html {
 	font-family: 'Baloo Da 2', cursive;
 	font-size: 62.5%;
+
+	@include respond(laptop) {
+		font-size: 55%;
+	}
 }

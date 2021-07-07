@@ -16,5 +16,9 @@
 		color: var(--color-white);
 		width: 50%;
 		margin: 0 auto 4rem auto;
+
+		@include respond(laptop) {
+			width: 70%;
+		}
 	}
 }

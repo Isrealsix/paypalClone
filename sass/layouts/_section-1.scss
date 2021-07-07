@@ -9,4 +9,8 @@
 		url('/images/bg.jpg') center no-repeat;
 	background-size: cover;
 	position: relative;
+
+	@include respond(laptop) {
+		height: 70vh;
+	}
 }

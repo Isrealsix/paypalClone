@@ -3,11 +3,23 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	@include respond(wide) {
+		width: 80%;
+	}
+
+	@include respond(laptop) {
+		width: 90%;
+	}
+
 	.feature {
 		width: calc(100% / 3);
 		text-align: center;
 		padding: 0 5rem;
 		margin-bottom: 5rem;
+
+		@include respond(wide) {
+			padding: 0 3rem;
+		}
 
 		&__heading {
 			width: max-content;

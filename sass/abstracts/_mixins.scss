@@ -1,0 +1,32 @@
+// Breakpoints manager
+
+$wide: 93.75em; // 1500px
+$laptop: 87.5em; // 1400px
+$laptop-sm: 75em; //1200px
+$laptop-xsm: 68.75em; // 1100px
+
+@mixin respond($breakpoint) {
+	@if ($breakpoint == wide) {
+		@media only screen and (max-width: $wide) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == laptop) {
+		@media only screen and (max-width: $laptop) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == laptop-sm) {
+		@media only screen and (max-width: $laptop-sm) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == laptop-xsm) {
+		@media only screen and (max-width: $laptop-xsm) {
+			@content;
+		}
+	}
+}

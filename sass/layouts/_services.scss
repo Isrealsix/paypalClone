@@ -1,6 +1,10 @@
 .services {
 	display: flex;
 
+	@include respond(laptop) {
+		width: 90%;
+	}
+
 	.service {
 		width: 35rem;
 		text-align: center;

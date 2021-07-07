@@ -15,8 +15,17 @@
 	&__content {
 		display: flex;
 
+		@include respond(laptop) {
+			width: 80%;
+		}
+
 		.section-4__image-box {
 			width: 50rem;
+
+			@include respond(laptop) {
+				width: 40rem;
+				margin-right: 6rem;
+			}
 
 			img {
 				width: 100%;

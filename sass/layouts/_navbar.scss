@@ -11,6 +11,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include respond(laptop) {
+			width: 100rem;
+		}
 	}
 
 	&__list {
@@ -65,12 +69,23 @@
 		opacity: 0;
 		visibility: hidden;
 		// transition: all 0.1s;
+		@include respond(wide) {
+			padding: 0 25rem;
+		}
 
 		&-item {
 			width: 25rem;
 			margin: 2rem 10rem;
 			display: flex;
 			flex-direction: column;
+
+			@include respond(wide) {
+				margin: 2rem 6rem;
+			}
+
+			@include respond(laptop-xsm) {
+				margin: 2rem 3.4rem;
+			}
 		}
 
 		&-link--1,
