@@ -1,4 +1,5 @@
 // Navigation dropdown hover
+'use strict';
 
 const navbar = document.querySelector('.navbar');
 const section1 = document.querySelector('.section-1');
@@ -34,3 +35,34 @@ const displayDropdown = eventType => {
 
 displayDropdown('mouseover');
 displayDropdown('mouseout');
+
+// pages
+const loginPage = document.querySelector('.login-page');
+const frontPage = document.querySelector('.front-page');
+const signupPage = document.querySelector('.signup-page');
+
+const allLogo = document.querySelectorAll('.logo');
+const allSignup = document.querySelectorAll('.signup');
+const allLogin = document.querySelectorAll('.login');
+
+const container = document.querySelector('.container');
+
+container.addEventListener('click', ev => {
+	if (ev.target.closest('.logo')) {
+		loginPage.style.display = 'none';
+		frontPage.style.display = 'block';
+		signupPage.style.display = 'none';
+	}
+
+	if (ev.target.closest('.signup')) {
+		loginPage.style.display = 'none';
+		frontPage.style.display = 'none';
+		signupPage.style.display = 'flex';
+	}
+
+	if (ev.target.closest('#login')) {
+		loginPage.style.display = 'block';
+		frontPage.style.display = 'none';
+		signupPage.style.display = 'none';
+	}
+});
