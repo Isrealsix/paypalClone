@@ -356,10 +356,24 @@ html {
     font-weight: 600;
     cursor: pointer; }
 
+.signup-form .form__group {
+  display: flex;
+  margin: 1.5rem; }
+  .signup-form .form__group input[type='radio'] {
+    width: 30%;
+    height: 2rem;
+    margin: 0.5rem 0 1rem -1.5rem; }
+  .signup-form .form__group .form__option h3 {
+    font-size: 1.7rem;
+    font-size: 600; }
+  .signup-form .form__group .form__option p {
+    font-size: 1.5rem; }
+
 .login-page {
   width: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  display: none; }
   .login-page .login {
     position: absolute;
     top: 12%;
@@ -380,3 +394,61 @@ html {
         color: #064699; }
       .login-page .login__logo span:nth-child(4) {
         color: #32a4f0; }
+
+.signup-page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(112, 112, 112, 0.9), rgba(255, 255, 255, 0.8) 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .signup-page__top {
+    width: 120rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem; }
+    .signup-page__top button {
+      width: 8rem;
+      padding: 0.7rem;
+      background-color: transparent;
+      border: 0.1rem solid var(--color-white);
+      border-radius: 3rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-white);
+      cursor: pointer; }
+  .signup-page__logo .logo--p2 {
+    color: #e9e9e9; }
+  .signup-page .signup-box {
+    width: 120rem;
+    display: flex;
+    justify-content: space-between; }
+    .signup-page .signup-box__left {
+      width: 60%;
+      border-right: 0.1rem solid #b1b1b1;
+      padding: 3rem 3rem 3rem 0; }
+      .signup-page .signup-box__left--images {
+        display: flex;
+        margin-bottom: 5rem; }
+        .signup-page .signup-box__left--images img {
+          width: 18rem;
+          border-radius: 50%;
+          border: 1.5rem solid #ccc;
+          margin-right: 5rem; }
+      .signup-page .signup-box__left h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        color: #333;
+        line-height: 1.1; }
+    .signup-page .signup-box__right {
+      width: 40%;
+      padding: 3rem 0 3rem 3rem;
+      color: #555; }
+      .signup-page .signup-box__right h3 {
+        font-size: 2.4rem;
+        font-weight: 300; }
+      .signup-page .signup-box__right h4 {
+        font-size: 1.6rem;
+        font-weight: 500; }

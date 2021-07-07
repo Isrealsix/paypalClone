@@ -1,0 +1,22 @@
+.signup-form {
+	.form__group {
+		display: flex;
+		margin: 1.5rem;
+
+		input[type='radio'] {
+			width: 30%;
+			height: 2rem;
+			margin: 0.5rem 0 1rem -1.5rem;
+		}
+		.form__option {
+			h3 {
+				font-size: 1.7rem;
+				font-size: 600;
+			}
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
