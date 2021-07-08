@@ -99,3 +99,5 @@ if (window.innerWidth < 1000) {
 	displayDropdown('mouseover');
 	displayDropdown('mouseout');
 }
+
+window.addEventListener('resize', () => window.location.reload());
