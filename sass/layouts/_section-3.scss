@@ -16,5 +16,9 @@
 		font-size: 5rem;
 		font-weight: 300;
 		margin-bottom: 5rem;
+
+		@include respond(phone-land) {
+			font-size: 4rem;
+		}
 	}
 }

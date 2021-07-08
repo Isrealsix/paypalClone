@@ -13,11 +13,24 @@
 		justify-content: space-between;
 		border-bottom: 0.1rem dotted #262626;
 		padding-bottom: 1rem;
+
+		@include respond(tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include respond(phone-land) {
+			width: 90%;
+		}
 	}
 
 	&__list {
 		display: flex;
 		justify-content: center;
+
+		@include respond(tablet) {
+			margin-bottom: 1rem;
+		}
 
 		li {
 			margin-right: 2.5rem;
@@ -40,4 +53,8 @@
 	font-size: 1.4rem;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
+
+	@include respond(tablet) {
+		margin: 1.5rem 0;
+	}
 }

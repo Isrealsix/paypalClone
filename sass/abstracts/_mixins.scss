@@ -5,6 +5,9 @@ $laptop: 87.5em; // 1400px
 $laptop-sm: 75em; //1200px
 $laptop-xsm: 68.75em; // 1100px
 $tablet: 62.5em; // 1000px
+$tab-port: 50em; // 800px
+$phone-land: 34.375em; // 550px
+$tiny: 25em; // 400px
 
 @mixin respond($breakpoint) {
 	@if ($breakpoint == wide) {
@@ -33,6 +36,24 @@ $tablet: 62.5em; // 1000px
 
 	@if ($breakpoint == tablet) {
 		@media only screen and (max-width: $tablet) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == tab-port) {
+		@media only screen and (max-width: $tab-port) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == phone-land) {
+		@media only screen and (max-width: $phone-land) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == tiny) {
+		@media only screen and (max-width: $tiny) {
 			@content;
 		}
 	}

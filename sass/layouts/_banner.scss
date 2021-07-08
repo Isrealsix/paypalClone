@@ -9,6 +9,10 @@
 		font-weight: 300;
 		color: var(--color-white);
 		margin-bottom: 3rem;
+
+		@include respond(phone-land) {
+			font-size: 4.5rem;
+		}
 	}
 
 	&__paragraph {
@@ -19,6 +23,10 @@
 
 		@include respond(laptop) {
 			width: 70%;
+		}
+
+		@include respond(phone-land) {
+			line-height: 1.2;
 		}
 	}
 }

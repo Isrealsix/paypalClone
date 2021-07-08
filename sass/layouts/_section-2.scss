@@ -5,10 +5,24 @@
 	flex-direction: column;
 	align-items: center;
 
+	@include respond(tab-port) {
+		padding: 10rem 0;
+	}
+
 	&__heading {
 		font-size: 5rem;
 		font-weight: 300;
 		color: #333;
 		margin-bottom: 3rem;
+
+		@include respond(tablet) {
+			font-size: 4rem;
+		}
+
+		@include respond(tab-port) {
+			width: 80%;
+			text-align: center;
+			line-height: 1.2;
+		}
 	}
 }

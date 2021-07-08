@@ -5,15 +5,38 @@
 		width: 90%;
 	}
 
+	@include respond(tab-port) {
+		width: 95%;
+	}
+
+	@include respond(phone-land) {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.service {
 		width: 35rem;
 		text-align: center;
 		margin: 0 5rem;
 
+		@include respond(tab-port) {
+			width: 30rem;
+			margin: 0 2rem;
+		}
+
+		@include respond(phone-land) {
+			width: 60%;
+			margin-bottom: 4rem;
+		}
+
 		i {
 			font-size: 6rem;
 			color: #229fe7;
 			margin: 2rem 0;
+
+			@include respond(tab-port) {
+				font-size: 4rem;
+			}
 		}
 
 		&__heading {
@@ -39,6 +62,11 @@
 			color: #036bb1;
 			cursor: pointer;
 			font-weight: bold;
+
+			@include respond(tab-port) {
+				width: 15rem;
+				padding: 1rem;
+			}
 		}
 	}
 }

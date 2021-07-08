@@ -11,6 +11,10 @@
 		// transform: translateX(16rem);
 		transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 
+		@include respond(tiny) {
+			width: 5rem;
+		}
+
 		&__icon {
 			height: 1.5rem;
 			display: flex;
@@ -26,6 +30,10 @@
 		span {
 			font-size: 1.8rem;
 			color: var(--color-white);
+
+			@include respond(tiny) {
+				display: none;
+			}
 		}
 	}
 

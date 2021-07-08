@@ -12,6 +12,11 @@
 				width: 10%;
 				margin: 0.5rem 0 0 -3rem;
 			}
+
+			@include respond(tab-port) {
+				width: 20%;
+				margin: 0.5rem 1.5rem 0 0;
+			}
 		}
 		.form__option {
 			h3 {

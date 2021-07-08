@@ -11,6 +11,18 @@
 		width: 90%;
 	}
 
+	@include respond(tablet) {
+		width: 95%;
+	}
+
+	@include respond(tab-port) {
+		width: 100%;
+	}
+
+	@include respond(phone-land) {
+		flex-direction: column;
+		align-items: center;
+	}
 	.feature {
 		width: calc(100% / 3);
 		text-align: center;
@@ -19,6 +31,20 @@
 
 		@include respond(wide) {
 			padding: 0 3rem;
+		}
+
+		@include respond(tablet) {
+			padding: 0 1.5rem;
+		}
+
+		@include respond(tab-port) {
+			width: 50%;
+			padding: 0 4rem;
+			text-align: left;
+		}
+
+		@include respond(phone-land) {
+			width: 80%;
 		}
 
 		&__heading {
