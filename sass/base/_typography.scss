@@ -5,4 +5,8 @@ html {
 	@include respond(laptop) {
 		font-size: 55%;
 	}
+
+	@include respond(tablet) {
+		font-size: 50%;
+	}
 }

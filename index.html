@@ -22,6 +22,14 @@
             <section class="section-1">
                 <div class="navbar">
                     <nav class="navbar__box">
+                        <div class="menu">
+                            <div class="menu__icon">
+                                <div class="menu__line menu__line--1"></div>
+                                <div class="menu__line menu__line--2"></div>
+                                <div class="menu__line menu__line--3"></div>
+                            </div>
+                            <span>Menu</span>
+                        </div>
                         <div class="navbar__logo logo">
                             <span class="logo--p1">P</span>
                             <span class="logo--p2">P</span>
@@ -31,7 +39,10 @@
                         <ul class="navbar__list">
                             <li class="navbar__item dropdown-hover">
                                 <a href="#" class="navbar__link">Personal <i class="fas fa-chevron-down"></i></a>
-                                <ul class="navbar__dropdown">
+                                <ul class="navbar__dropdown navbar__dropdown--personal">
+                                    <li class="navbar__dropdown-item navbar__dropdown-heading">
+                                        <a href="#"><i class="fas fa-chevron-down"></i> Personal</a>
+                                    </li>
                                     <li class="navbar__dropdown-item">
                                         <a href="#" class="navbar__dropdown-link--1">How Paypal works</a>
                                         <a href="#" class="navbar__dropdown-link--2">What can you do with a personal
@@ -57,7 +68,10 @@
 
                             <li class="navbar__item dropdown-hover">
                                 <a href="#" class="navbar__link">Business <i class="fas fa-chevron-down"></i></a>
-                                <ul class="navbar__dropdown">
+                                <ul class="navbar__dropdown navbar__dropdown--business">
+                                    <li class="navbar__dropdown-item navbar__dropdown-heading">
+                                        <a href="#"><i class="fas fa-chevron-down"></i> Business</a>
+                                    </li>
                                     <li class="navbar__dropdown-item">
                                         <a href="#" class="navbar__dropdown-link--1">All business Solutions</a>
                                         <a href="#" class="navbar__dropdown-link--2">See our range of products</a>

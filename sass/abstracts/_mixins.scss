@@ -4,6 +4,7 @@ $wide: 93.75em; // 1500px
 $laptop: 87.5em; // 1400px
 $laptop-sm: 75em; //1200px
 $laptop-xsm: 68.75em; // 1100px
+$tablet: 62.5em; // 1000px
 
 @mixin respond($breakpoint) {
 	@if ($breakpoint == wide) {
@@ -26,6 +27,12 @@ $laptop-xsm: 68.75em; // 1100px
 
 	@if ($breakpoint == laptop-xsm) {
 		@media only screen and (max-width: $laptop-xsm) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint == tablet) {
+		@media only screen and (max-width: $tablet) {
 			@content;
 		}
 	}

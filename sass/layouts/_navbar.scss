@@ -5,6 +5,10 @@
 	display: flex;
 	justify-content: center;
 
+	@include respond(tablet) {
+		padding: 0 5rem;
+	}
+
 	&__box {
 		width: 120rem;
 		height: 100%;
@@ -17,8 +21,32 @@
 		}
 	}
 
-	&__list {
+	&__list,
+	.navbar__dropdown--personal {
 		display: flex;
+
+		@include respond(tablet) {
+			// display: none; // here
+			flex-direction: column;
+			padding-top: 2rem;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 20rem;
+			height: 100vh;
+			background: linear-gradient(#032181, #094399, #04207c);
+			z-index: 100;
+
+			.navbar__dropdown-link--2 {
+				display: none;
+			}
+			.navbar__dropdown--personal {
+				opacity: 1;
+				visibility: visible;
+				padding: 1rem;
+				justify-content: flex-start;
+			}
+		}
 	}
 
 	&__item {
@@ -28,8 +56,19 @@
 		align-items: center;
 		transition: border-bottom 0.1s;
 
+		@include respond(tablet) {
+			width: 100%;
+			height: auto;
+			padding: 0 1rem;
+			margin: 0.4rem 0;
+		}
+
 		&:hover {
 			border-bottom: 0.2rem solid var(--color-white);
+
+			@include respond(tablet) {
+				border-bottom: none;
+			}
 		}
 
 		&:hover .navbar__link i {
@@ -47,10 +86,19 @@
 		display: flex;
 		align-items: center;
 
+		@include respond(tablet) {
+			font-size: 1.4rem;
+		}
+
 		i {
 			font-size: 1.5rem;
 			margin-left: 0.5rem;
 			transition: transform 0.3s;
+
+			@include respond(tablet) {
+				font-size: 1.2rem;
+				transform: rotate(-90deg);
+			}
 		}
 	}
 
@@ -73,6 +121,22 @@
 			padding: 0 25rem;
 		}
 
+		@include respond(tablet) {
+			display: none;
+
+			&-heading a {
+				font-size: 1.6rem;
+				text-transform: uppercase;
+				color: var(--color-white);
+
+				i {
+					font-size: 1.5rem;
+					margin-right: 1rem;
+					transform: rotate(90deg);
+				}
+			}
+		}
+
 		&-item {
 			width: 25rem;
 			margin: 2rem 10rem;
@@ -86,6 +150,11 @@
 			@include respond(laptop-xsm) {
 				margin: 2rem 3.4rem;
 			}
+
+			@include respond(tablet) {
+				width: 100%;
+				margin: 1rem 1rem 0 1rem;
+			}
 		}
 
 		&-link--1,
@@ -95,11 +164,13 @@
 
 		&-link--1 {
 			font-size: 1.6rem;
+			@include respond(tablet) {
+				font-size: 1.4rem;
+			}
 		}
 
 		&-link--2 {
 			font-size: 1.3rem;
-			color: var(--color-white);
 		}
 	}
 }
