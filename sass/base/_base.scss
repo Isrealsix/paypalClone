@@ -7,6 +7,17 @@
 	outline: none;
 }
 
+.menu {
+	display: none;
+}
+
+li.navbar__dropdown-item.navbar__dropdown-heading {
+	display: none;
+
+	@include respond(tablet) {
+		display: block;
+	}
+}
 // .front-page {
 // 	// display: none;
 // }

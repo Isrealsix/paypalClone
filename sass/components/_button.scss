@@ -1,4 +1,7 @@
 .navbar__buttons {
+	@include respond(tablet) {
+		margin-left: auto;
+	}
 	.navbar__btn {
 		width: 8rem;
 		padding: 0.7rem;

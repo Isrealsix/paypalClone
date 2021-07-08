@@ -9,6 +9,15 @@
 		padding: 0 5rem;
 	}
 
+	&__logo {
+		@include respond(tablet) {
+			position: absolute;
+			top: 4rem;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	&__box {
 		width: 120rem;
 		height: 100%;
@@ -22,7 +31,8 @@
 	}
 
 	&__list,
-	.navbar__dropdown--personal {
+	.navbar__dropdown--personal,
+	.navbar__dropdown--business {
 		display: flex;
 
 		@include respond(tablet) {
@@ -31,20 +41,20 @@
 			padding-top: 2rem;
 			position: fixed;
 			top: 0;
-			left: 0;
+			left: -20rem;
 			width: 20rem;
 			height: 100vh;
 			background: linear-gradient(#032181, #094399, #04207c);
 			z-index: 100;
 
+			opacity: 1;
+			visibility: visible;
+			padding: 1rem;
+			justify-content: flex-start;
+			transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 			.navbar__dropdown-link--2 {
 				display: none;
-			}
-			.navbar__dropdown--personal {
-				opacity: 1;
-				visibility: visible;
-				padding: 1rem;
-				justify-content: flex-start;
 			}
 		}
 	}
@@ -71,9 +81,9 @@
 			}
 		}
 
-		&:hover .navbar__link i {
-			transform: rotateZ(180deg);
-		}
+		// &:hover .navbar__link i {
+		// 	transform: rotateZ(180deg);
+		// }
 	}
 
 	&__link {
@@ -117,6 +127,7 @@
 		opacity: 0;
 		visibility: hidden;
 		// transition: all 0.1s;
+
 		@include respond(wide) {
 			padding: 0 25rem;
 		}
@@ -124,15 +135,18 @@
 		@include respond(tablet) {
 			display: none;
 
-			&-heading a {
-				font-size: 1.6rem;
-				text-transform: uppercase;
-				color: var(--color-white);
+			&-heading {
+				display: block;
+				a {
+					font-size: 1.6rem;
+					text-transform: uppercase;
+					color: var(--color-white);
 
-				i {
-					font-size: 1.5rem;
-					margin-right: 1rem;
-					transform: rotate(90deg);
+					i {
+						font-size: 1.5rem;
+						margin-right: 1rem;
+						transform: rotate(90deg);
+					}
 				}
 			}
 		}
@@ -164,13 +178,14 @@
 
 		&-link--1 {
 			font-size: 1.6rem;
-			@include respond(tablet) {
-				font-size: 1.4rem;
-			}
 		}
 
 		&-link--2 {
 			font-size: 1.3rem;
 		}
 	}
+}
+
+.change .navbar__list {
+	left: 0;
 }
