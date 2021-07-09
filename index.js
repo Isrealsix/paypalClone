@@ -30,8 +30,8 @@ const container = document.querySelector('.container');
 container.addEventListener('click', ev => {
 	if (ev.target.closest('.logo')) {
 		loginPage.style.display = 'none';
-		frontPage.style.display = 'block';
 		signupPage.style.display = 'none';
+		frontPage.style.display = 'block';
 	}
 
 	if (ev.target.closest('.signup')) {
@@ -41,9 +41,9 @@ container.addEventListener('click', ev => {
 	}
 
 	if (ev.target.closest('#login')) {
-		loginPage.style.display = 'block';
 		frontPage.style.display = 'none';
 		signupPage.style.display = 'none';
+		loginPage.style.display = 'block';
 	}
 });
 
